@@ -25,7 +25,7 @@ var dashboard = new ParseDashboard({
   "users": [
     {
       "user":"user",
-      "pass":"pass"
+      "pass": process.env.USER_PASS
     }
   ]
 }, allowInsecureHTTP);
