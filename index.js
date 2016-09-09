@@ -11,6 +11,19 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+var ParseDashboard = require('parse-dashboard');
+
+var dashboard = new ParseDashboard({
+  "apps": [
+    {
+      "serverURL": "https://geochatparseserver.herokuapp.com/parse",
+      "appId": "myAppId",
+      "masterKey": "myMasterKey",
+      "appName": "GeoChat"
+    }
+  ]
+});
+
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
@@ -26,6 +39,10 @@ var api = new ParseServer({
 // javascriptKey, restAPIKey, dotNetKey, clientKey
 
 var app = express();
+
+
+// make the Parse Dashboard available at /dashboard
+app.use('/dashboard', dashboard);
 
 // Serve static assets from the /public folder
 app.use('/public', express.static(path.join(__dirname, '/public')));
