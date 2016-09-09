@@ -21,6 +21,12 @@ var dashboard = new ParseDashboard({
       "masterKey": "myMasterKey",
       "appName": "GeoChat"
     }
+  ],
+  "users": [
+    {
+      "user":"user",
+      "pass":"pass"
+    }
   ]
 }, allowInsecureHTTP);
 
