@@ -1,0 +1,16 @@
+{
+  "apps": [
+    {
+      "serverURL": "https://geochatparseserver.herokuapp.com/parse",
+      "appId": "myAppId",
+      "masterKey": "myMasterKey",
+      "appName": "GeoChatParseServer"
+    }
+  ]
+  "users": [
+    {
+      "user":"user1",
+      "pass":"pass" // change this to something secure
+    }
+  ]
+}
