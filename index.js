@@ -20,6 +20,12 @@ var dashboard = new ParseDashboard({
       "appId": "myAppId",
       "masterKey": "myMasterKey",
       "appName": "GeoChat"
+    },
+    {
+      "serverURL": "https://geochatparseserver.herokuapp.com/parse",
+      "appId": "myAppId",
+      "masterKey": "myMasterKey",
+      "appName": "TCC"
     }
   ],
   "users": [
