@@ -16,14 +16,14 @@ var ParseDashboard = require('parse-dashboard');
 var dashboard = new ParseDashboard({
     "apps": [{
             "serverURL": "https://geochatparseserver.herokuapp.com/parse",
-            "appId": "myAppId",
-            "masterKey": "myMasterKey",
+            "appId": process.env.APP_ID,
+            "masterKey": process.env.MASTER_KEY,
             "appName": "GeoChat"
         },
         {
             "serverURL": "https://geochatparseserver.herokuapp.com/parse",
-            "appId": "myAppId",
-            "masterKey": "myMasterKey",
+            "appId": process.env.APP_ID,
+            "masterKey": process.env.MASTER_KEY,
             "appName": "TCC"
         }
     ],
